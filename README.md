@@ -29,9 +29,9 @@ LAN Network                                    Attack Network
 |                                              |
 Ubuntu Server                                  Kali Linux
 10.10.10.100                                   10.30.30.x
+```
 
-
-Tools Used
+##Tools Used
 VirtualBox
 pfSense
 Ubuntu Server
@@ -39,7 +39,8 @@ Kali Linux
 Nmap
 Wireshark
 OpenSSH
-What I Configured
+##What I Configured
+
 pfSense Firewall
 
 I installed and configured pfSense as the main firewall and router for the lab. I configured interfaces for the LAN and attack networks and used pfSense to provide DHCP addressing.
@@ -59,6 +60,7 @@ I created firewall rules on pfSense to control traffic from the attack network. 
 Wireshark Traffic Analysis
 
 I used Wireshark to capture and inspect traffic between Kali and Ubuntu. This helped me verify ICMP traffic, scan traffic, and how firewall rules changed communication between the networks.
+
 Testing Performed
 1. Connectivity Testing
 
@@ -79,9 +81,7 @@ After confirming the scan worked, I created a pfSense firewall rule to block tra
 
 I used Wireshark to capture ICMP and TCP traffic during testing.
 
-Screenshots
-pfSense Interface Configuration
-
+##Screenshots
 Ubuntu Server IP Address
 <img width="840" height="94" alt="image" src="https://github.com/user-attachments/assets/ab73eca2-2cb3-45e8-ae96-b7fd0e778691" />
 
@@ -104,7 +104,7 @@ Wireshark Capture
 
 
 
-Skills Practiced
+##Skills Practiced
 Virtualization
 Network segmentation
 Firewall configuration
@@ -116,19 +116,22 @@ SSH service discovery
 Wireshark packet analysis
 Basic threat simulation
 Security control validation
-Challenges
+
+##Challenges
 
 One challenge was getting traffic between segmented networks to work properly. pfSense blocks optional interfaces by default, so I had to create the correct firewall rules to allow or block traffic depending on the test.
 
 I also attempted to add OpenVPN as an extension, but I decided to keep it as a future improvement because the main lab goals were already completed.
 
-Future Improvements
+##Future Improvements
 Add OpenVPN remote access
 Add Suricata or Snort IDS/IPS
 Add Windows Server and Active Directory
 Forward logs to Wazuh or Splunk
 Create dashboards for security monitoring
 Add more attack and detection scenarios
-Project Summary
+
+##Project Summary
+This homelab gave me hands-on practice with firewall routing, network segmentation, attacker simulation, and packet analysis. It helped me understand how traffic moves between networks and how firewall rules can be used to control access in a security environment.
 
 This homelab gave me hands-on practice with firewall routing, network segmentation, attacker simulation, and packet analysis. It helped me understand how traffic moves between networks and how firewall rules can be used to control access in a security environment.
